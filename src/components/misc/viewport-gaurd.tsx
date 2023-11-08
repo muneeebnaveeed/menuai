@@ -16,7 +16,11 @@ const ViewportGaurd: FC<PropsWithChildren> = ({ children }) => {
 
   if (shouldRenderView) return <>{children}</>;
 
-  return <div>Please set the viewport to 1920x1080</div>;
+  return (
+    <div className="w-screen h-screen flex items-center justify-center">
+      <h1 className="text-independant-grey-active text-4xl font-bold">Please set the viewport to 1920x1080</h1>
+    </div>
+  );
 };
 
 export default ViewportGaurd;
